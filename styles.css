@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+}
+
+.panel-container {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+}
+
+.panel {
+  min-height: 100vh;
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  color: white;
+}
+
+.panel > * {
+  transition: transform 0.5s;
+}
+
+.panel1 {
+  background-color: red;
+}
+.panel2 {
+  background-color: blue;
+}
+.panel3 {
+  background-color: green;
+}
+.panel4 {
+  background-color: yellowgreen;
+}
+.panel5 {
+  background-color: forestgreen;
+}
+
+.panel > :first-child {
+  transform: translateY(-1000%);
+}
+.panel > :last-child {
+  transform: translateY(1000%);
+}
+
+.panel.active {
+  flex-grow: 5;
+  font-size: 3rem;
+}
+.panel.active-open > :first-child {
+  transform: translateY(0);
+}
+.panel.active-open > :last-child {
+  transform: translateY(0);
+}
