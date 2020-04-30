@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: sans-serif;
 }
 
 .panel-container {
@@ -15,36 +16,47 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   overflow: hidden;
   transition: all 0.3s ease-in;
-  color: white;
+  color: yellow;
+  cursor: pointer;
 }
 
 .panel > * {
-  transition: transform 0.5s;
+  transition: transform 0.3s;
 }
 
 .panel1 {
-  background-color: red;
+  background-image: url(./src/kareemCjpg.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .panel2 {
-  background-color: blue;
+  background-image: url(./src/malone.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .panel3 {
-  background-color: green;
+  background-image: url(./src/lebron.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .panel4 {
-  background-color: yellowgreen;
+  background-image: url(./src/kobe.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .panel5 {
-  background-color: forestgreen;
+  background-image: url(./src/jordan.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-.panel > :first-child {
+.panel > *:first-child {
   transform: translateY(-1000%);
 }
-.panel > :last-child {
+.panel > *:last-child {
   transform: translateY(1000%);
 }
 

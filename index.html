@@ -12,29 +12,29 @@
 
   <div class="panel-container">
     <div class="panel panel1">
-      <p>Hey</p>
-      <p>let's</p>
-      <p>dance</p>
+      <p>1. Kareem Abdul-Jabaar</p>
+      <p></p>
+      <p>38,387 points</p>
     </div>
     <div class="panel panel2">
-      <p>Give</p>
-      <p>take</p>
-      <p>receive</p>
+      <p>2. Karl Malone</p>
+      <p></p>
+      <p>36,928 points</p>
     </div>
     <div class="panel panel3">
-      <p>Experience</p>
-      <p>it</p>
-      <p>today</p>
+      <p>3. LeBron James</p>
+      <p></p>
+      <p>34,087 points</p>
     </div>
     <div class="panel panel4">
-      <p>give</p>
-      <p>all</p>
-      <p>you can</p>
+      <p>4. Kobe Bryant</p>
+      <p>a</p>
+      <p>33,643 points</p>
     </div>
     <div class="panel panel5">
-      <p>life</p>
-      <p>in</p>
-      <p>motion</p>
+      <p>5. Michael Jordan</p>
+      <p></p>
+      <p>32,292 points</p>
     </div>
   </div>
 
@@ -42,11 +42,15 @@
     function toggleOpen() {
       this.classList.toggle("active");
     }
-    function toggleActive(e) {
-      console.log(e.propertyName);
-      if (e.propertyName.includes("flex")) {
-        this.classList.toggle("active-open");
+    function toggleActive() {
+      if (getComputedStyle(this).flexGrow == 5) {
+        this.classList.add("active-open");
       }
+      else {
+        this.classList.remove("active-open");
+      }
+
+
     }
     let panels = document.querySelectorAll(".panel");
     panels.forEach(item => item.addEventListener("click", toggleOpen));
